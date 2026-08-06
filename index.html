@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مظلات وسواتر المملكه | الهندسية للحدادة والمقاولات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-glow {
+            animation: pulseGlow 6s ease-in-out infinite;
+        }
+        .why-us-section {
+    padding: 50px 20px;
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
+}
+.why-us-section h2 {
+    font-size: 28px;
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+.why-subtitle {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 في السطر للموبايل */
+    gap: 20px;
+}
+.why-item {
+    background: #111;
+    padding: 25px 15px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+.why-item:hover {
+    border-color: #f39c12;
+    transform: translateY(-5px);
+}
+.why-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.why-item h3 {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.why-item p {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* للشاشات الكبيرة 4 في السطر */
+@media (min-width: 768px) {
+    .why-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.tiny-gallery {
+    padding: 30px 5px;
+    background: #0a0a0a;
+    text-align: center;
+}
+.tiny-gallery h2 {
+    color: #f39c12;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.tiny-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+    padding:10px;
+}
+.tiny-item{
+    position:relative; /* مهم عشان النص يثبت فوق الصورة */
+}
+.tiny-item img{
+    width:100%;
+    height:85px;
+    object-fit:cover;
+    border-radius:5px;
+    cursor:pointer;
+}
+.caption-text{
+    position:absolute;
+    bottom:0; /* يلزقه تحت */
+    left:0;
+    right:0;
+    background: rgba(0,0,0,0.6); /* خلفية شفافة سوداء */
+    color:#fff;
+    font-size:10px; /* صغير */
+    padding:4px;
+    text-align:center;
+    border-radius:0 0 5px 5px; /* مدور من تحت بس */
+    display:none; /* مخفي */
+    line-height:1.3;
+}
+.caption-text.show{
+    display:block; /* يظهر عند الضغط */
+}
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased overflow-x-hidden">
+
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none animate-glow"></div>
+    <div class="fixed bottom-10 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none animate-glow" style="animation-delay: 3s;"></div>
+
+    <header class="bg-slate-950/70 backdrop-blur-md border-b border-slate-800/80 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-black text-amber-500 tracking-wide flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
+                مظلات وسواتر المملكه
+            </h1>
+            <div class="flex gap-3">
+                <a href="tel:+966546974824" class="bg-slate-900 hover:bg-slate-800 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 border border-slate-800 hover:border-slate-700 shadow-sm">📞 اتصال</a>
+                <a href="https://wa.me/966546974824" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg shadow-emerald-600/20 hover:scale-105">واتساب</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-4 text-center max-w-4xl mx-auto relative z-10">
+        <div class="inline-block animate-float mb-4">
+            <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-amber-500/20 shadow-inner">
+                ⭐ خبرة طويلة وضمان شامل بالرياض
+            </span>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight bg-gradient-to-r from-white via-slate-200 to-amber-400 bg-clip-text text-transparent">
+            تنفيذ أعمال الحدادة الإنشائية والمظلات والسواتر باحترافية
+        </h2>
+        <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+            نبتكر أحدث تصاميم البرجولات، السواتر العصرية، هناجر المستودعات، وغرف الساندويش بنل بأعلى مواصفات الجودة.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="#calculator" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-amber-500/20 hover:scale-105">
+                حاسبة التكلفة الفورية 🧮
+            </a>
+            <a href="#portfolio" class="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-semibold px-8 py-4 rounded-2xl transition-all duration-300">
+                استعرض أعمالنا
+            </a>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-12 px-4 max-w-xl mx-auto relative z-10">
+        <div class="bg-slate-900/80 border border-slate-800/80 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-slate-700">
+            <h3 class="text-2xl font-bold mb-2 text-amber-400 text-center">حاسبة التكلفة التقديرية</h3>
+            <p class="text-slate-400 text-xs mb-6 text-center">اختر الخدمة وحدد المساحة لتظهر التكلفة بشكل فوري</p>
+
+            <div class="space-y-5">
+                <div>
+<div class="space-y-5">
+    <div>
+        <label class="block text-sm font-semibold mb-2 text-slate-300"></label>
+        <select id="pricing" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-amber-500 transition">
+            <option <option value="" disabled selected>اختر الصنف المطلوب...</option>
+<option value="100">مظلات PVC</option>
+<option value="350">مظلة خشبية كاسرة الشمس</option>
+<option value="250">جلسات لكسان</option>
+<option value="400">مظلات بديل الخشب - ساندويش بانل</option>
+<option value="350">مظلات بديل الخشب - قماش PVC</option>
+<option value="160">ساندويش بانل</option>
+<option value="250">تغطية مسابح بديل الخشب</option>
+<option value="250">باركيه ارضيات بديل الخشب</option>
+<option value="350">تكسيات أبواب WPC</option>
+<option value="500">هناجر تسليم مفتاح</option>
+<option value="90">مستودعات شينكو</option>
+<option value="350">سواتر قص ليزر</option>
+<option value="250">سواتر بديل الخشب</option>
+<option value="70">سواتر شينكو</option>
+<option value="250">واجهات كلادنج</option>
+<option value="400">مظلات كلادنج تغطية بنل</option>
+<option value="170">درابزين مشغول</option>
+<option value="180">درابزين استيل</option>
+<option value="200">درابزين قص ليزر</option>
+</select>
+    </div>
+
+    <div>
+        <label class="block text-sm font-semibold mb-2 text-slate-300">المساحة التقريبية (متر مربع):</label>
+        <input type="number" id="area" placeholder="أدخل المساحة" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-amber-500 transition">
+    </div>
+
+<button onclick="calculateCost()" class="w-full py-4 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-2xl shadow-lg transition">احسب السعر التقريبي</button>
+
+
+    <div id="resultBox" class="hidden text-center space-y-4 pt-2">
+        <p id="totalPrice" class="text-xl font-bold text-slate-100">السعر التقريبي: 0 ريال</p>
+        <a id="whatsappBtn" href="#" target="_blank" class="block w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-2xl shadow-lg text-center transition">طلب عبر واتساب 💬</a>
+    </div>
+</div>
+
+<script>
+function calculateCost() {
+    var price = parseFloat(document.getElementById('pricing').value) || 0;
+    var area = parseFloat(document.getElementById('area').value) || 0;
+    var total = price * area;
+    
+    var selectElement = document.getElementById('pricing');
+    var selectedText = selectElement.options[selectElement.selectedIndex].text;
+
+    if(price === 0 && selectedText.includes("حسب الطلب")) {
+        document.getElementById('totalPrice').innerText = "السعر التقريبي: حسب الطلب";
+    } else {
+        document.getElementById('totalPrice').innerText = "السعر التقريبي: " + total.toLocaleString() + " ريال";
+    }
+
+    document.getElementById('resultBox').classList.remove('hidden');
+
+    var msg = "السلام عليكم، أريغب بطلب خدمة: " + selectedText + " بمساحة: " + area + " متر مربع. السعر التقريبي: " + (price === 0 ? "حسب الطلب" : total + " ريال");
+    var waUrl = "https://wa.me/966500000000?text=" + encodeURIComponent(msg);
+    document.getElementById('whatsappBtn').setAttribute('href', waUrl);
+}
+</script>
+
+
+  </div>
+
+    <!-- قائمة السواتر الفرعية -->
+    <div id="subServiceBox" class="hidden">
+        <label class="block text-sm font-semibold mb-2 text-slate-300">اختر نوع السواتر:</label>
+        <select id="subServiceType" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-amber-500 transition">
+            
+    </div>
+</div>
+
+
+<!-- قائمة السواتر الفرعية (تظهر فقط عند اختيار سواتر) -->
+<div id="subServiceBox" class="hidden mt-4">
+    <label class="block text-sm font-semibold mb-2 text-slate-300">اختر نوع السواتر:</label>
+    <select id="subServiceType" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-amber-500 transition">
+                   </div>                                  
+              
+                    
+<!-- قائمة أنواع السواتر الفرعية (تظهر عند اختيار سواتر فقط) -->
+<div id="subServiceBox" class="hidden mt-4">
+    <label class="block text-sm font-semibold mb-2 text-slate-300">اختر نوع الساتر:</label>
+    <select id="subServiceType" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-amber-500 transition">    
+</div>
+
+
+                <div>
+                    <label class="block text-sm font-semibold mb-2 text-slate-300">المساحة التقريبية (متر مربع):</label>
+                    <input type="number" id="areaSize" min="1" value="25" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-slate-100 focus:outline-none focus:border-amber-500 transition">
+                </div>
+
+                <div id="resultBox" class="hidden mt-6 p-5 bg-slate-950/90 border border-amber-500/30 rounded-2xl text-center animate-pulse">
+                    <p class="text-slate-400 text-xs">التكلفة التقديرية للمشروع:</p>
+                    <p class="text-3xl font-black text-amber-400 my-1"><span id="totalPrice">0</span> ريال سعودي</p>
+                    <p class="text-[11px] text-slate-500 mt-1">* السعر تقريبي ويتم تأكيده بعد المعاينة الميدانية.</p>
+                    <a id="whatsappOrder" href="#" target="_blank" class="mt-4 inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 text-sm font-bold px-6 py-3 rounded-xl transition-all w-full shadow-lg shadow-amber-500/20">
+                        
+                        طلب هذا العرض عبر واتساب 💬
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 px-4 max-w-6xl mx-auto relative z-10">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-black mb-3">معرض الأعمال المميزة</h3>
+            <p class="text-slate-400 text-sm">استعرض جانباً من أحدث مشاريعنا المنفذة في مختلف أحياء الرياض</p>
+            
+            <div class="flex flex-wrap justify-center gap-2 mt-8">
+                <button onclick="filterPortfolio('all')" class="filter-btn active bg-amber-500 text-slate-950 px-5 py-2 rounded-xl text-xs font-bold transition shadow-md">الكل</button>
+                <button onclick="filterPortfolio('shades')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800">مظلات سيارات</button>
+                <button onclick="filterPortfolio('pergolas')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800">برجولات وجلسات</button>
+                                <button onclick="filterPortfolio('kashp')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800">أعمال بديل الخشب WPC</button>
+                <button onclick="filterPortfolio('panels')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800">ساندويش بنل</button>
+                
+                                <button onclick="filterPortfolio('hangars')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800"> هناجر تجاريه </button>
+                                <button onclick="filterPortfolio('sawater')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800">سواتر خصوصيه</button>
+              <button onclick="filterPortfolio('cladng')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800"> كيلادنج </button>                  
+                                               <button onclick="filterPortfolio('darpzen')" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-5 py-2 rounded-xl text-xs font-bold transition hover:bg-slate-800">درزينات</button>           
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="portfolioGrid">
+
+<div class="portfolio-item shades group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+
+
+                <img src="images/pic2.jpg" alt="مظلة سيارات" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">مظلات سيارات قماش PVC</span>
+                    <p class="text-slate-300 text-sm">تركيب مظلات مواقف سيارات بتصميم معلق بدون أعمدة أمامية.</p>                             
+</div>
+</div>
+
+<!-- قسم برجولات وجلسات -->
+            <div class="portfolio-item shades group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic1.jpg" alt="كاسره الشمس حديد فاخره" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1"> مظلات سيارات خشبيه</span>
+                    <p class="text-slate-300 text-sm">مظلات سيارات حديد عصريه مع شرائح خشبيه كاسره للشمس .</p>           
+                 </div>
+                </div>
+                           <div class="portfolio-item pergolas group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                 <img src="images/pic9.jpg" alt="جلسات مودون                 " class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">جلسات لكزان مع LED</span>
+                    <p class="text-slate-300 text-sm">جلسات لكزان مع إضاءة LED وديكور جداري بديل الخشب.                                       
+                    </div> 
+                </div>
+                                           <div class="portfolio-item pergolas group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                 <img src="images/pic10.jpg" alt="جلسات خيزران تراثيه                 " class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1"> جلسات خيزران تراثيه </span>
+                    <p class="text-slate-300 text-sm">جلسات تراثيه من الخيزران تعطيك منظر الطبيعه.                                          </div>
+                </div>
+<div class="portfolio-item pergolas group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                 <img src="images/pic36.jpg" alt="جلسات خيزران تراثيه                 " class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1"> جلسات قماشه bvc </span>
+                    <p class="text-slate-300 text-sm">جلسات قماش متحركة يدوي مع إضاءة LED تحكم كامل بالظل والشمس. أجواء راقية للاستراحات والكافيهات.                                </div>
+                </div>
+
+             <div class="portfolio-item kashp group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                 <img src="images/pic39.jpg" alt="جلسات مودون                 " class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">غطاء مسبح متحرك</span>
+                    <p class="text-slate-300 text-sm">غطاء مسابح متحرك من بديل الخشب WPC المقاوم للماء والرطوبة.                                                                      </div> 
+                </div>
+             <div class="portfolio-item kashp group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                 <img src="images/pic40.jpg" alt="جلسات مودون                 " class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">باركيه ارضيات WPS</span>
+                    <p class="text-slate-300 text-sm">ارضيات WPC مقاومة للماء والرطوبة والتآكل.  
+مثالية للمسابح، الحدائق، الأسطح، والجلسات.  
+تركيب احترافي + ألوان متعددة                                                         </div> 
+                </div>
+             <div class="portfolio-item kashp group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                 <img src="images/pic41.jpg" alt="جلسات مودون                 " class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">مظلات بديل الخشب WPC</span>
+                    <p class="text-slate-300 text-sm">تنفيذ مظلات وجلسات من ألواح بديل الخشب WPC المقاوم للحرارة والماء مع إضاءة LED.                                                                   </div> 
+                </div>
+             <div class="portfolio-item kashp group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                 <img src="images/pic42.jpg" alt="تكسيات ابواب بديل الخشب الرياض" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">تكسيات ابواب WPC</span>
+                    <p class="text-slate-300 text-sm">  تكسيات ابواب بديل الخشب WPC المقاوم للماء والرطوبة.                                                                      </div> 
+                </div>
+
+            <div class="portfolio-item panels group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic3.jpg" alt="ساندويش بنل" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">غرف ساندويش بنل</span>
+                    <p class="text-slate-300 text-sm">ملاحق وغرف عازلة للحرارة ومقاومة للعوامل الجوية.</p>
+                </div>
+            </div>
+                        <div class="portfolio-item panels group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic37.jpg" alt="ساندويش بنل" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">شقق ساندويش بنل</span>
+                    <p class="text-slate-300 text-sm">تركيب شقق من الساندوش بنل المعزول"عازل للصوت الحراره".</p>
+                </div>
+            </div>
+            
+                 
+            <div class="portfolio-item cladng group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic6.jpg" alt="اعمال الكيلادنج" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">مظلات سيارات كيلادنج</span>
+                    <p class="text-slate-300 text-sm"> تركيب مظلات سيارات كيلادنج عصريه بشكل رائع.</p>           
+                 </div>
+                </div>
+                            <div class="portfolio-item cladng group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic11.jpg" alt="واجهات محلات كيلادنج الرياض" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">واجهات محلات كيلادنج</span>
+                                        <p class="text-slate-300 text-sm"> واجهات محلات كيلادنج واجهات فنادق واجهات شركات .</p>           
+                 </div>
+                </div>
+                    
+               
+           
+            <div class="portfolio-item hangars group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic12.jpg" alt="هناجر متكامله" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1"> هناجر متكامله </span>
+                    <p class="text-slate-300 text-sm">تركيب هناجر تجارية وصناعية هيكل قوي وضمان 10 سنوات ضد الصدأ.</p>
+                </div>
+         </div>       
+                             <div class="portfolio-item hangars group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic4.jpg" alt="هناجر تجاريه" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1"> هناجر تجاريه </span>
+                    <p class="text-slate-300 text-sm">تركيب هناجر تجاريه باعلى معايير الجوده.</p>
+                </div>
+         </div>                 
+                            
+                            <div class="portfolio-item sawater group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic7.jpg" alt="سواتر خصوصيه" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">سواتر قص ليزر</span>
+                    <p class="text-slate-300 text-sm">سواتر قص ليزر حديد بتصاميم هندسية. توفر الخصوصية والتهوية مع دهان مقاوم للشمس والمطر.</p>             
+            </div>
+            </div>      
+                                        <div class="portfolio-item sawater group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic35.jpg" alt="سواتر خصوصيه" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">سواتر حديد شرائح </span>
+                    <p class="text-slate-300 text-sm">سواتر شرائح حديد بتصميم عصري. توفر الخصوصية مع التهوية ودهان مقاوم للشمس والمطر.</p>             
+            </div>
+            </div>      
+                        <div class="portfolio-item darpzen group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic8.jpg" alt="دربزينات حمايه درج" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">دربزينات درج قص ليزر </span>
+                    <p class="text-slate-300 text-sm">دربزين حديد قص ليزر تصاميم حسب الطلب مع دهان  فرن.</p>           
+                 </div>
+                </div>
+                                           <div class="portfolio-item darpzen group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic34.jpg" alt="دربزينات حمايه درج" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">دربزين مشغول فخم</span>
+                    <p class="text-slate-300 text-sm">دربزين حديد مشغول يدوي بتصميم كلاسيكي فخم.</p>           
+                 </div>
+                </div>                 
+                <div class="portfolio-item darpzen group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 aspect-video md:aspect-square">
+                <img src="images/pic38.jpg" alt="دربزينات الرياض" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span class="text-amber-400 text-xs font-bold mb-1">درابزين استيل فخامه</span>
+                    <p class="text-slate-300 text-sm">درابزين استيل 304 مقاوم للصدأ 100% مع نقشه ذهبي.</p>           
+                 </div>
+                </div>                
+           </div>                   
+    </section>
+
+    <script>
+ function toggleSubService() {
+    const serviceType = document.getElementById('serviceType').value;
+    const subServiceBox = document.getElementById('subServiceBox');
+
+    if (serviceType === 'sawatir') {
+        subServiceBox.classList.remove('hidden');
+    } else {
+        subServiceBox.classList.add('hidden');
+    }
+}
+
+function calculatePrice() {
+    const serviceSelect = document.getElementById('serviceType');
+    let pricePerMeter = parseFloat(serviceSelect.value);
+    let serviceText = serviceSelect.selectedOptions[0].text;
+
+    // إذا اختار العميل السواتر، نأخذ السعر والاسم من القائمة الفرعية للأنواع
+    if (serviceSelect.value === 'sawatir') {
+        const subServiceSelect = document.getElementById('subServiceType');
+        pricePerMeter = parseFloat(subServiceSelect.value);
+        serviceText = subServiceSelect.selectedOptions[0].text;
+    }
+
+    const area = parseFloat(document.getElementById('areaSize').value);
+
+    if (isNaN(area) || area <= 0) {
+        alert('الرجاء إدخال مساحة صحيحة');
+        return;
+    }
+
+    const total = pricePerMeter * area;
+    document.getElementById('totalPrice').innerText = total.toLocaleString();
+    
+    const waMessage = `السلام عليكم، أرغب في تنفيذ (${serviceText}) بمساحة (${area} متر مربع). التكلفة التقديرية (${total.toLocaleString()} ريال). أرجو التواصل للمعاينة.`;
+    document.getElementById('whatsappOrder').href = `https://wa.me/966546974824?text=${encodeURIComponent(waMessage)}`;
+
+    const resultBox = document.getElementById('resultBox');
+    resultBox.classList.remove('hidden');
+    resultBox.scrollIntoView({ behavior: 'smooth' });
+}
+       
+
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-slate-950');
+                btn.classList.add('bg-slate-900', 'text-slate-300');
+            });
+            event.target.classList.remove('bg-slate-900', 'text-slate-300');
+            event.target.classList.add('bg-amber-500', 'text-slate-950');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
+    <!-- 1. ضع كود النافذة المنبثقة هنا (قبل وسم إغلاق الجسم مباشرة) -->
+<div id="customModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p>هنا يمكنك عرض تفاصيل إضافية حول القسم، الصور الأخرى، المواصفات، وأنواع التغطيات.</p>
+        <button class="action-btn">طلب استشارة أو تسعيرة</button>
+    </div>
+</div>
+
+<!-- 2. أضف دوال الجافاسكريبت داخل وسم الـ script الموجود لديك بالنهاية -->
+<script>
+function openModal(sectionName) {
+    const modal = document.getElementById('customModal');
+    const modalTitle = document.getElementById('modalTitle');
+    modalTitle.innerText = "عرض المزيد حول " + sectionName;
+    modal.style.display = 'flex';
+}
+
+function closeModal() {
+    const modal = document.getElementById('customModal');
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('customModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+</script>
+
+    <!-- نافذة عرض تفاصيل القسم الاحترافية -->
+<div id="customModal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-y-auto" style="display: none;">
+    <div class="bg-slate-900 border border-amber-400/50 rounded-2xl w-full max-w-3xl p-6 relative max-h-[90vh] overflow-y-auto text-right">
+        
+        <!-- زر إغلاق النافذة (X) -->
+        <button onclick="closeModal()" class="absolute top-4 left-4 text-slate-400 hover:text-amber-400 text-2xl font-bold">&times;</button>
+        
+        <!-- عنوان القسم -->
+        <h2 id="modalTitle" class="text-amber-400 text-xl font-bold mb-2">تفاصيل القسم</h2>
+        <p class="text-slate-300 text-sm mb-6">استعرض كافة أعمال هذا القسم:</p>
+
+        <!-- شبكة عرض الصور داخل النافذة -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                <img src="images/pic2.jpg" alt="صورة المشروع" class="w-full h-40 object-cover rounded-lg mb-2">
+                <h4 class="text-amber-400 font-bold text-sm">عنوان الصورة أو التصميم</h4>
+                <p class="text-slate-300 text-xs">وصف مختصر للمواصفات أو خامات الصنع.</p>
+            </div>
+            <!-- يمكنك تكرار المربع السابق لصور أكثر -->
+        </div>
+
+        <!-- زر التواصل أو الطلب -->
+        <a href="https://wa.me/" target="_blank" class="block text-center bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-4 rounded-xl transition">
+            اطلب تنفيذ هذا القسم عبر واتساب
+        </a>
+    </div>
+</div>
+
+<script>
+function openModal(sectionName) {
+    const modal = document.getElementById('customModal');
+    const modalTitle = document.getElementById('modalTitle');
+    if (modalTitle) { modalTitle.innerText = "تفاصيل أعمال: " + sectionName; }
+    if (modal) { modal.style.display = 'flex'; }
+}
+
+function closeModal() {
+    const modal = document.getElementById('customModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+</script>
+        </div>
+    </div>
+     </div>
+     
+
+</section> <!-- إغلاق قسم الـ section الرئيسي -->
+<section id="portfolio" class="py-20 px-4 max-w-6xl mx-auto relative z-10">
+    
+
+    
+    
+    <!-- عنوان القسم -->
+    <div class="text-center mb-12">
+        <h3 class="text-3xl font-black mb-3">نماذج وأشكال مقترحة</h3>
+    </div>
+
+    <!-- حاوية الشبكة لعرض 4 صور في السطر -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        
+        <!-- صورة رقم 14 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic14.jpg" alt="14" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات سيارات هرميه قماش PVC
+            </div>
+        </div>
+
+        <!-- صورة رقم 15 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic15.jpg" alt="15" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                غرف من الساندويش بنل المعزول 
+            </div>
+        </div>
+
+        <!-- صورة رقم 16 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic16.jpg" alt="16" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات قماش كوري جوده وضمان 
+            </div>
+        </div>
+
+        <!-- صورة رقم 17 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic17.jpg" alt="17" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات إطار حديد مع شرائح خشبيه "كاسرة الشمس" 
+            </div>
+        </div>
+
+        <!-- صورة رقم 18 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic18.jpg" alt="18" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                توريد وتركيب خيام بيوت شعر بتصاميم فخمة
+            </div>
+        </div>
+
+        <!-- صورة رقم 19 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic19.jpg" alt="19" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                جلسات WPC بديل الخشب البلاستيكي مقاوم للرطوبة والشمس
+            </div>
+        </div>
+
+        <!-- صورة رقم 20 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic20.jpg" alt="20" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات مساجد قماش مقوى مقاوم للعوامل الجوية
+            </div>
+        </div>
+
+        <!-- صورة رقم 21 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic21.jpg" alt="21" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                سواتر خصوصه للاحواش، حديد مجدول مع دهان مقاوم للصدا
+            </div>
+        </div>
+
+        <!-- صورة رقم 22 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic22.jpg" alt="22" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات مواقف كبيرة للمجمعات والشركات والمدارس
+            </div>
+        </div>
+
+        <!-- صورة رقم 23 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic23.jpg" alt="23" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                تغطية مسابح مظلات الشد الإنسائي
+            </div>
+        </div>
+
+        <!-- صورة رقم 24 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic24.jpg" alt="24" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                غرف ومستودعات ساندويش بانل عازل للصوت والحراره
+            </div>
+        </div>
+
+        <!-- صورة رقم 25 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic25.jpg" alt="25" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات جلسات خارجية تصميم مودرن مع اضاءة LED
+            </div>
+        </div>
+
+        <!-- صورة رقم 26 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic26.jpg" alt="26" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                سواتر ليزر بزخرفة إسلامية توفر الخصوصية مع الفخامه.
+            </div>
+        </div>
+
+        <!-- صورة رقم 27 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic27.jpg" alt="27" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات ملاعب رياضية تغطية كبيرة بمواصفات عالية
+            </div>
+        </div>
+
+        <!-- صورة رقم 28 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic28.jpg" alt="28" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                سواتر خشب معالج للحدائق والفلل مقاوم للتسوس
+            </div>
+        </div>
+
+        <!-- صورة رقم 29 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic29.jpg" alt="29" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات مداخل فلل تصميم فخم يعطي منظر راقي
+            </div>
+        </div>
+
+        <!-- صورة رقم 30 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic30.jpg" alt="30" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                مظلات سيارات قماش PVC بشكل X
+            </div>
+        </div>
+
+        <!-- صورة رقم 31 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic31.jpg" alt="31" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                سواتر حديد مجدول ارتفاعات عالية وتغطية كاملة
+            </div>
+        </div>
+
+        <!-- صورة رقم 32 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic32.jpg" alt="32" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                توريد وتركيب هناجر صناعيه ضمان 10 سنوات
+            </div>
+        </div>
+
+        <!-- صورة رقم 33 -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer image-container">
+            <img src="images/pic33.jpg" alt="33" class="w-full h-full object-cover z-0">
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/80 text-white p-2 text-sm text-center flex items-center justify-center transition-transform duration-300 translate-y-full overlay-text z-10">
+                تفصيل سلالم حديديه صلابه وأمان
+            </div>  
+            </div>
+    
+</section>
+                  </div>           
+<section class="why-us-section">
+    <h2>لماذا تختار مظلات وسواتر المملكة ؟</h2>
+    <p class="why-subtitle">خبرة 10 سنوات في تنفيذ جميع اعمال المظلات والسواتر بالرياض</p>
+
+    <div class="why-grid">
+        
+        <!-- ميزة 1 -->
+        <div class="why-item">
+            <div class="why-icon">⚡</div>
+            <h3>سرعة في التنفيذ</h3>
+            <p>نلتزم بالمواعيد. تسليم المشاريع خلال 7 الى 15 يوم حسب الاتفاق</p>
+        </div>
+
+        <!-- ميزة 2 -->
+        <div class="why-item">
+            <div class="why-icon">✅</div>
+            <h3>جودة عالية</h3>
+            <p>نستخدم افضل انواع الحديد والقماش المستورد مع عزل 100% ضد الشمس والمطر</p>
+        </div>
+
+        <!-- ميزة 3 -->
+        <div class="why-item">
+            <div class="why-icon">🛡️</div>
+            <h3>ضمان حقي</h3>
+            <p>ضمان 5 سنوات على جميع اعمالنا. وصيانة مجانية خلال فترة الضمان</p>
+        </div>
+
+        <!-- ميزة 4 -->
+        <div class="why-item">
+            <div class="why-icon">💰</div>
+            <h3>اسعار منافسة</h3>
+            <p>افضل سعر في الرياض مع خامات ممتازة. ونعطيك خصم عند التعاقد الفوري</p>
+        </div>
+
+    </div>
+</section>
+<!-- نهاية قسم لماذا نحن -->
+    <footer class="border-t border-slate-900 py-8 text-center text-slate-500 text-xs mt-12 bg-slate-950/80 relative z-10">
+        <p>جميع الحقوق محفوظة © 2026 مظلات وسواتر المملكه</p>
+         اعداد وتنفيذ: حسن الطاهري  773280289
+    </footer>
+    <script>
+    // تحديد جميع الصور التي تحتوي على الفئة image-container
+    const imageContainers = document.querySelectorAll('.image-container');
+
+    imageContainers.forEach(container => {
+        container.addEventListener('click', function() {
+            // العثور على طبقة النص داخل الحاوية التي تم النقر عليها
+            const overlay = this.querySelector('.overlay-text');
+            
+            // التبديل بين إظهار وإخفاء النص عبر تحريكه للأعلى والأسفل
+            overlay.classList.toggle('translate-y-full'); // الحالة المخفية (أسفل الإطار)
+            overlay.classList.toggle('translate-y-0');    // الحالة الظاهرة (في مكانها الطبيعي)
+        });
+    });
+</script>
+
+</body>
+</html>
