@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+
+Sitemap: 
+https://madalatalriyad-ksa.netlify.app/sitemap.xml

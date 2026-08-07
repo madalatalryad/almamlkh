@@ -1,0 +1,11 @@
+{
+  "slider": [
+    {"id": 1, "image": "pic1.jpg", "title": "مظلات الرياض"},
+    {"id": 2, "image": "pic2.jpg", "title": "سواتر"},
+    {"id": 3, "image": "pic3.jpg", "title": "برجولات"}
+  ],
+  "services": [
+    {"id": 1, "name": "تركيب مظلات", "price": "من 120 ريال"},
+    {"id": 2, "name": "تركيب سواتر", "price": "من 90 ريال"}
+  ]
+}
